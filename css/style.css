@@ -1,1 +1,88 @@
+/************************
 
+  Peter Buk
+  CEIE270
+  2019.07.17
+
+  Cafe Neuvo
+************************/
+
+@charset "utf-8";
+
+/************************ 
+HTML and main Body Styles 
+************************/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1, h2, p, ul, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: auto;
+	background-color: #ddd;
+}
+
+header {
+  background-color: rgb(136, 136, 136);
+  overflow: auto;
+}
+
+.hero {
+  background-image: url("../img/cafe-banner.jpg");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/**************
+	Typography
+**************/
+
+
+
+/**************
+	Navigation
+**************/
+nav {
+  float: right;
+	padding-right: 2.5%;
+	margin-top: 25px;
+}
+nav ul { 
+	list-style: none;
+}
+nav li {
+  display: inline-block;
+  padding: 20px 15px;
+  text-align: right;
+	font-family: "Helvetica";
+  font-size: 1em;
+	color: #bbb;
+	cursor: pointer;
+} 
+
+#logoContainer {
+  display: inline-block;
+  width: 40%;
+  padding: 1em;
+}
+#logo {
+	width: 100%;
+}
+
+nav ul li:hover {
+	color: black;
+	
+	transition-property: all;
+	transition-duration: 500ms;
+}
