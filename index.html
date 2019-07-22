@@ -1,3 +1,13 @@
+<!-- TODO
+
+  - add tagline
+  - disappear on scroll down
+  - nav bar change
+
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,27 +20,94 @@
 </head>
 <body>
 
-  <header>
-    <div id="logoContainer">
-      <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
-    </div>
-    <nav>
-      <ul>
-        <li>Menu</li>
-        <li>Gallery</li>
-        <li>Location & Hours</li>
-      </ul>
-    </nav>
-  </header>
+
+
   
   <main>
-    <div class="hero">
-      
+    <header class="hero">
+      <div id="logoContainer">
+        <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li>ABOUT</li>
+          <li>MENU</li>
+          <li>LOCATION</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="section">
+      <p>Coffee matters with us. Originally from Europe, we came here with a mission to bring the love of coffee to Vancouver. We
+      believe a good cup starts with a cup of care and that philosophy is behind everything we serve here. Come here to
+      discover what makes us unique. Your coffee is waiting.
+
+      We are proud to offer you a careful selection of in-house made food including sandwiches, salads, soups, and baked
+      goods. They are made with mostly organic, locally sourced fresh ingredients and the condiments used are made from
+      scratch in-house.
+      </p>
+    </div>
+
+    <div class="section imgSection">
+      <img src="img/pouring-coffee.jpg" alt="pouring coffee" />
+    </div>
+
+    <div class="sliderSection">
+    </div>
+
+    <div class="section">
+      <table>
+        <tr>
+          <th colspan="2">FOOD</th>
+        </tr>
+        <tr>
+          <td>Croissants</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Muffins</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Cookies</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Cake</td>
+          <td>5</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <table>
+        <tr>
+          <th colspan="2">DRINK</th>
+        </tr>
+        <tr>
+          <td>Drip Coffee</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Espresso</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Tea</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Latte</td>
+          <td>5</td>
+        </tr>
+      </table>
     </div>
 
   </main>
 
   <footer></footer>
-  
+    
+
+  <script src="js/script.js"></script>
 </body>
 </html>
