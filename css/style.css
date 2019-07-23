@@ -178,9 +178,20 @@ footer {
 	Images
 **************/
 
-img {
+.fullImage {
   width: 100%;
+  display: inline-block;
 }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+}
+
 
 
 /**************

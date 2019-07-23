@@ -19,3 +19,13 @@
 //     navbar.classList.remove("sticky");
 //   }
 // }
+
+$('.carousel').flickity({
+  // options
+  cellAlign: 'center',
+  resize: true,
+  wrapAround: true,
+  imagesLoaded: true,
+  pageDots: false,
+  autoPlay: 1500
+});

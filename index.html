@@ -1,5 +1,4 @@
 <!-- TODO
-  - image slider plugin
   - footer map plugin
   - scalable html5 media?
   - change all px to em
@@ -8,6 +7,9 @@
   - add tagline
   - tagline disappear on scroll down
   - nav bar change
+
+  Plugins used:
+  Flickity: https://flickity.metafizzy.co/
 
 -->
 
@@ -20,12 +22,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cafe Neuvo</title>
 
+  <link href="css/flickity.css" rel="stylesheet" media="screen" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-
-
-
   
   <main>
     <div class="fullSection hero"></div>
@@ -55,10 +55,20 @@
     </div>
 
     <div class="section imgSection sectionRight">
-      <img src="img/pouring-coffee.jpg" alt="pouring coffee" />
+      <img class="fullImage" src="img/pouring-coffee.jpg" alt="pouring coffee" />
     </div>
 
     <div class="fullSection sliderSection">
+      <div class="carousel">
+        <img class="sliderImage" src="img/cafe01.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe02.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe03.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe04.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe01.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe02.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe03.jpg" alt="" />
+        <img class="sliderImage" src="img/cafe04.jpg" alt="" />
+      </div>
     </div>
 
     <div class="section sectionLeft">
@@ -143,7 +153,8 @@
 
   </main>
     
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
