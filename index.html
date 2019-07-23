@@ -1,9 +1,13 @@
 <!-- TODO
+  - image slider plugin
+  - footer map plugin
+  - scalable html5 media?
+  - change all px to em
 
+  bonus
   - add tagline
-  - disappear on scroll down
+  - tagline disappear on scroll down
   - nav bar change
-
 
 -->
 
@@ -24,20 +28,22 @@
 
   
   <main>
-    <header class="hero">
-      <div id="logoContainer">
-        <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
-      </div>
-      <nav id="navbar">
-        <ul>
-          <li>ABOUT</li>
-          <li>MENU</li>
-          <li>LOCATION</li>
-        </ul>
-      </nav>
-    </header>
+    <div class="fullSection hero"></div>
 
-    <div class="section">
+    <div id="logoContainer">
+      <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
+    </div>
+
+    <nav id="navbar">
+      <ul>
+        <li>ABOUT</li>
+        <li>MENU</li>
+        <li>LOCATION</li>
+      </ul>
+    </nav>
+
+    <div class="section sectionLeft">
+      <h1>About Cafe Neuvo</h1>
       <p>Coffee matters with us. Originally from Europe, we came here with a mission to bring the love of coffee to Vancouver. We
       believe a good cup starts with a cup of care and that philosophy is behind everything we serve here. Come here to
       discover what makes us unique. Your coffee is waiting.
@@ -48,15 +54,15 @@
       </p>
     </div>
 
-    <div class="section imgSection">
+    <div class="section imgSection sectionRight">
       <img src="img/pouring-coffee.jpg" alt="pouring coffee" />
     </div>
 
-    <div class="sliderSection">
+    <div class="fullSection sliderSection">
     </div>
 
-    <div class="section">
-      <table>
+    <div class="section sectionLeft">
+      <table class="menu">
         <tr>
           <th colspan="2">FOOD</th>
         </tr>
@@ -79,8 +85,8 @@
       </table>
     </div>
 
-    <div class="section">
-      <table>
+    <div class="section sectionRight">
+      <table class="menu">
         <tr>
           <th colspan="2">DRINK</th>
         </tr>
@@ -103,9 +109,39 @@
       </table>
     </div>
 
-  </main>
+    
 
-  <footer></footer>
+    <footer class="fullSection">
+      <div class="footerLeft">
+        <img src="https://via.placeholder.com/400x300" alt="map">
+      </div>
+      
+      <div class="footerRight">
+        <h1>Cafe Neuvo</h1>
+        <p>
+          1251 Main Street<br>
+          T2V 1X6<br>
+          Vancouver, BC<br>
+        </p>
+      
+        <table>
+          <tr>
+            <td>mon-fri</td>
+            <td>6am-7pm</td>
+          </tr>
+          <tr>
+            <td>sat</td>
+            <td>7am-6pm</td>
+          </tr>
+          <tr>
+            <td>sun</td>
+            <td>7am-5pm</td>
+          </tr>
+        </table>
+      </div>
+    </footer>
+
+  </main>
     
 
   <script src="js/script.js"></script>

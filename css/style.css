@@ -39,7 +39,6 @@ body {
 }
 
 
-
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -51,21 +50,35 @@ main {
 }
 
 
-
 /**************
 	Grid Layout
 **************/
 
-header {
-  grid-column: span 12;
+.hero {
+  grid-row: 1;
+}
 
-  height: 600px;
-  width: 100%;
+#logoContainer {
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+nav {
+  grid-column: 1 / 13;
+  grid-row: 2 / 3;
 }
 
 .section {
   grid-column: 2 / 12;
   padding: 3em 1em;
+}
+
+.fullSection {
+  grid-column: 1 / 13;
 }
 
 .imgSection {
@@ -74,15 +87,7 @@ header {
 }
 
 .sliderSection {
-  grid-column: span 12;
   background-color: bisque;
-  
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 
 
@@ -91,8 +96,15 @@ header {
 	Typography
 **************/
 
-p {
+h1, h2, p {
   font-family: SFProTextRegular, sans-serif;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+p {
   line-height: 1.5em;
   font-size: 1em;
 }
@@ -103,16 +115,13 @@ p {
 	Header / Navigation
 **************/
 
-header {
+.hero {
+  height: 600px;
   overflow: auto;
   background-image: url("../img/cafe-banner-overlay.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
-
-  position: relative;
-  width: 100%;
-  z-index: 5;
 
   transition: all 300ms ease;
 }
@@ -121,11 +130,7 @@ header {
   background-color: #1A2625;
 } */
 
-nav {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
+
 nav ul {   
   display: flex;
   justify-content: space-around;
@@ -147,15 +152,26 @@ nav ul li:hover {
   color: #bbb;
 } 
 
-#logoContainer {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-}
 #logo {
   width: 20em;
 }
 
+
+/**************
+	Footer
+**************/
+
+footer {
+  background-color: #1A2625;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5em 10%;
+}
+
+.footerLeft {
+  margin-bottom: 1em;
+}
 
 
 /**************
@@ -171,27 +187,33 @@ img {
 	Menu
 **************/
 
-table {
+.menu {
   display: flex;
   justify-content: center;
-  font-family: SFProTextRegular, sans-serif;
   border-spacing: 1em;
 }
-
-td:first-child {
+.menu tr td:first-child {
   text-align: right;
-  padding-right: 2em;
+}
+
+table {
+  font-family: SFProTextRegular, sans-serif;
+  margin-top: 1em;
 }
 th {
   font-size: 1.2em;
 }
+td {
+  padding-right: 2em;
+}
 
 
-@media (min-width: 700px) {
+
+@media (min-width: 750px) {
 
   main {
-    width: 90%;
-    max-width: 960px;
+    /* width: 90%; */
+    /* max-width: 960px; */
 
   }
 
@@ -200,28 +222,38 @@ th {
     grid-column: span 6;
   }
 
+  .sectionLeft {
+    grid-column: 2 / 7;
+  }
+  .sectionRight {
+    grid-column: 7 / 12;
+  }
+
   #logoContainer {
-    display: inline-flex;
-    width: 20%;
     justify-content: left;
-    padding: 1em;
+    grid-column: 2 / 6;
   }
 
   /* floating nav */
   nav {
-    display: block;
+    /* display: block;
     position: static;
     width: auto;
     float: right;
-    margin-right: 5%;
-    margin-top: 25px;
+    margin-right: 5%;*/
+    margin-top: 25px; 
+    grid-column: 7 / 12;
+    grid-row: 1 / 2;
+    justify-self: right;
   }
   nav ul {
     background-color: transparent;
+    justify-content: right;
   }
   nav li {
     display: inline-block;
-    padding: 20px 15px;
+
+    padding: 20px 4%;
     text-align: right;
     font-family: "Helvetica";
     font-size: 1em;
@@ -229,7 +261,13 @@ th {
     cursor: pointer;
   } 
 
-
+  footer {
+    flex-direction: row;
+    padding: 5em 5%;
+  }
+  .footerLeft {
+    margin-right: 5%;
+  }
 
 
 }
