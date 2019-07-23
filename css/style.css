@@ -146,7 +146,7 @@ nav li {
 	color: #fff;
   cursor: pointer;
   
-  transition: all 200ms ease;
+  transition: color 200ms ease;
 }
 nav ul li:hover {
   color: #bbb;
@@ -192,6 +192,11 @@ footer {
   height: 200px;
 }
 
+#map {
+  width: 30em;
+  height: 22em;
+}
+
 
 
 /**************
@@ -221,12 +226,6 @@ td {
 
 
 @media (min-width: 750px) {
-
-  main {
-    /* width: 90%; */
-    /* max-width: 960px; */
-
-  }
 
   .section {
     align-self: center;

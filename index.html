@@ -1,5 +1,4 @@
 <!-- TODO
-  - footer map plugin
   - scalable html5 media?
   - change all px to em
 
@@ -10,7 +9,7 @@
 
   Plugins used:
   Flickity: https://flickity.metafizzy.co/
-
+  Leaflet: https://leafletjs.com
 -->
 
 
@@ -22,6 +21,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cafe Neuvo</title>
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
   <link href="css/flickity.css" rel="stylesheet" media="screen" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -123,7 +125,7 @@
 
     <footer class="fullSection">
       <div class="footerLeft">
-        <img src="https://via.placeholder.com/400x300" alt="map">
+        <div id="map"></div>
       </div>
       
       <div class="footerRight">
@@ -155,6 +157,9 @@
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
   <script src="js/script.js"></script>
 </body>
 </html>
