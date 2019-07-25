@@ -5,21 +5,17 @@
   2019.07.17
 
   Cafe Neuvo
+
+  This CSS is flexible and mobile first with a media query 
+  for larger computer displays at 812px+.
 ************************/
 
 @charset "utf-8";
 
-@font-face {
-  font-family: SFProTextRegular;
-  src: url("../fonts/SF-Pro-Text-Regular.otf");
-}
 
 /************************ 
 HTML and main Body Styles 
 ************************/
-
-
-
 
 * {
 	-webkit-box-sizing: border-box;
@@ -49,6 +45,15 @@ main {
   position: relative;
 }
 
+#jumpToTop {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  width: 2em;
+  opacity: 0.3;
+  z-index: 2;
+}
+
 
 /**************
 	Grid Layout
@@ -74,8 +79,14 @@ nav {
 
 .section {
   grid-column: 2 / 12;
-  padding: 3em 1em;
+  row-gap: 2em;
   position: relative;
+}
+.section *:first-child {
+  margin-top: 1em;
+}
+.section *:last-child {
+  margin-bottom: 1em;
 }
 
 .fullSection {
@@ -91,8 +102,8 @@ nav {
   background-color: bisque;
 }
 
-.tagline {
-  display: none;
+.tagline { 
+  display: none; /* only show on widescreen */
 }
 
 
@@ -102,21 +113,28 @@ nav {
 **************/
 
 h1, h2, p {
-  font-family: SFProTextRegular, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
   margin-bottom: 1em;
+  font-weight: 600;
 }
 
 p {
   line-height: 1.5em;
   font-size: 1em;
+  font-weight: 400;
 }
 
 .tagline {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.4em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 
@@ -126,7 +144,7 @@ p {
 **************/
 
 .hero {
-  height: 300px;
+  height: 20em;
   overflow: auto;
   background-image: url("../img/cafe-banner-overlay.png");
   background-repeat: no-repeat;
@@ -135,10 +153,6 @@ p {
 
   transition: all 300ms ease;
 }
-
-/* .underFold {
-  background-color: #1A2625;
-} */
 
 
 nav ul {   
@@ -151,12 +165,10 @@ nav li {
   display: inline-block;
   padding: 1em 5%;
   text-align: right;
-	font-family: "Helvetica";
+	font-family: 'Montserrat', sans-serif;
   font-size: 1em;
 	color: #fff;
   cursor: pointer;
-  
-  
 }
 nav ul li a:hover {
   transition: color 200ms ease;
@@ -166,6 +178,8 @@ nav ul li a:hover {
 #logo {
   width: 20em;
 }
+
+
 
 
 /**************
@@ -186,13 +200,8 @@ footer {
 
 
 /**************
-	Images
+	Media
 **************/
-
-.fullImage {
-  width: 100%;
-  display: inline-block;
-}
 
 .carousel {
   background: #EEE;
@@ -200,12 +209,33 @@ footer {
 
 .carousel img {
   display: block;
-  height: 200px;
+  height: 12.5em;
 }
 
 #map {
-  width: 30em;
+  width: 80vw;
   height: 22em;
+}
+
+
+.videoContainer {
+  margin: 0.8em 5.333333333%;
+}
+
+.videoExternalContainer {
+  position:relative;
+  padding-bottom: 56.25%;
+  padding-top: 1.875em;
+  height: 0;
+  overflow:hidden;
+}
+
+.videoExternalContainer iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
 
 
@@ -224,7 +254,7 @@ footer {
 }
 
 table {
-  font-family: SFProTextRegular, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 1em;
 }
 th {
@@ -236,25 +266,49 @@ td {
 
 
 /**************
-	Menu
-**************/
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.anchor {
-  position: absolute;
-  top: 0;
-}
-
-
-/**************
 	Responsive
 **************/
 
-@media (min-width: 750px) {
+@media (min-width: 812px) {
+  
+  .section {
+    align-self: center;
+    grid-column: span 6;
+    margin: 5em 0;
+  }
+
+  .sectionLeft {
+    grid-column: 2 / 7;
+  }
+  .sectionRight {
+    grid-column: 7 / 12;
+  }
+
+
+
+
+  /* floating nav */
+  nav {
+    margin-right: 5%;
+    margin-top: 1.5em; 
+    grid-column: 9 / 12;
+    grid-row: 1 / 2;
+  }
+  nav ul {
+    background-color: transparent;
+    justify-content: right;
+  }
+  nav li {
+    display: inline-block;
+
+    padding: 1.5em 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+  } 
+
+
 
   .hero {
     height: 50em;
@@ -267,48 +321,12 @@ a {
     margin-top: 10em;
   }
 
-  .section {
-    align-self: center;
-    grid-column: span 6;
-  }
-
-  .sectionLeft {
-    grid-column: 2 / 7;
-  }
-  .sectionRight {
-    grid-column: 7 / 12;
-  }
-
   #logoContainer {
     justify-content: left;
     grid-column: 2 / 6;
   }
 
-  /* floating nav */
-  nav {
-    /* display: block;
-    position: static;
-    width: auto;
-    float: right;
-    margin-right: 5%;*/
-    margin-top: 25px; 
-    grid-column: 9 / 12;
-    grid-row: 1 / 2;
-  }
-  nav ul {
-    background-color: transparent;
-    justify-content: right;
-  }
-  nav li {
-    display: inline-block;
 
-    padding: 20px 4%;
-    text-align: right;
-    font-family: "Helvetica";
-    font-size: 1em;
-    color: #fff;
-    cursor: pointer;
-  } 
 
   footer {
     flex-direction: row;
@@ -319,4 +337,13 @@ a {
   }
 
 
+  .carousel img {
+    display: block;
+    height: 25em;
+  }
+
+  #map {
+    width: 30vw;
+    height: 22em;
+  }
 }

@@ -1,14 +1,14 @@
-<!-- TODO
-  - change all px to em
-  - change typeface
+<!-- 
 
-  bonus
-  - tagline disappear on scroll down
-  - nav bar change
+  Peter Buk
+  2019.07.17
+  CEIE270 Mobile Web Design
+
+  This is a mockup of a responsive one-page cafe website.
 
   Plugins used:
-  Flickity: https://flickity.metafizzy.co/
-  Leaflet: https://leafletjs.com
+  Leaflet: https://leafletjs.com  Embedded Maps
+  Flickity: https://flickity.metafizzy.co/  Image Carousel
 -->
 
 
@@ -20,21 +20,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cafe Neuvo</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Playfair+Display&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
   <link href="css/flickity.css" rel="stylesheet" media="screen" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-  
+  <a id="top"></a>
   <main>
+    <a href="#top"><img id="jumpToTop" src="img/jumpToTop.png" alt="to top"></a>
+
+    <!-- Hero Section  -->
     <div class="fullSection hero"></div>
-
     <div class="tagline">Your cup is waiting.</div>
-
+    
+    <!-- Logo -->
     <div id="logoContainer">
       <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
     </div>
-
+    
+    <!-- Navbar -->
     <nav id="navbar">
       <ul>
         <li><a href="#about">ABOUT</a></li>
@@ -43,23 +50,32 @@
       </ul>
     </nav>
 
-    <div class="section sectionLeft">
-      <a id="about" class="anchor"></a>
+
+    <!-- About Section -->
+    <div id="about" class="section sectionLeft">
       <h1>About Cafe Neuvo</h1>
       <p>Coffee matters with us. Originally from Europe, we came here with a mission to bring the love of coffee to Vancouver. We
       believe a good cup starts with a cup of care and that philosophy is behind everything we serve here. Come here to
       discover what makes us unique. Your coffee is waiting.
-
-      We are proud to offer you a careful selection of in-house made food including sandwiches, salads, soups, and baked
-      goods. They are made with mostly organic, locally sourced fresh ingredients and the condiments used are made from
-      scratch in-house.
+      <br><br>
+      We are proud to share our homemade made lattes and baked goods. The recipes have been passed down through generations
+      and we are honoured to make them a part of our cafe. All ingredients are organically selected, with no animal cruelty involved.
+      Here at Cafe Neuvo, we believe in a sustainable Earth, so we do not provide straws unless requested.
       </p>
     </div>
 
-    <div class="section imgSection sectionRight">
-      <img class="fullImage" src="img/pouring-coffee.jpg" alt="pouring coffee" />
+    <!-- Video Promo Section -->
+    <div class="section sectionRight">
+      <div class="videoContainer">
+        <div class="videoExternalContainer">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/N5ooRD0f52Y" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
+    
 
+    <!-- Image Carousel -->
     <div class="fullSection sliderSection">
       <div class="carousel">
         <img class="sliderImage" src="img/cafe01.jpg" alt="" />
@@ -73,6 +89,8 @@
       </div>
     </div>
 
+
+    <!-- Menu section -->
     <div id="menu" class="section sectionLeft">
       <table class="menu">
         <tr>
@@ -123,7 +141,7 @@
           <td>5</td>
         </tr>
         <tr>
-          <td>Loose Leaf Tea (Assorted)</td>
+          <td>Loose Leaf Tea</td>
           <td>3</td>
         </tr>
         <tr>
@@ -138,7 +156,7 @@
     </div>
 
     
-
+    <!-- Footer Section -->
     <footer id="location" class="fullSection">
       <div class="footerLeft">
         <div id="map"></div>

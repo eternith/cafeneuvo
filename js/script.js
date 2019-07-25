@@ -1,26 +1,3 @@
-// window.onscroll = () => {
-//   const header = document.querySelector('header');
-//   if (this.scrollY <= 550)
-//     header.className = "";
-//   else
-//     header.className = "underFold";
-// };
-
-
-// window.onscroll = function () { myFunction() };
-
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
-
-
 // smooth scroll to anchor
 // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 
@@ -45,13 +22,12 @@ $(document).ready(function () {
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
 });
 
 
 // carousel plugin
-
 $('.carousel').flickity({
   // options
   cellAlign: 'center',
@@ -64,8 +40,7 @@ $('.carousel').flickity({
 
 
 
-// MAP plugin
-
+// Map plugin
 var myMap = L.map('map').setView([49.2655, -123.106], 14);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
