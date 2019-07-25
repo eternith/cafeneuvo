@@ -1,9 +1,8 @@
 <!-- TODO
-  - scalable html5 media?
   - change all px to em
+  - change typeface
 
   bonus
-  - add tagline
   - tagline disappear on scroll down
   - nav bar change
 
@@ -21,9 +20,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cafe Neuvo</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
   <link href="css/flickity.css" rel="stylesheet" media="screen" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -32,19 +29,22 @@
   <main>
     <div class="fullSection hero"></div>
 
+    <div class="tagline">Your cup is waiting.</div>
+
     <div id="logoContainer">
       <a href="./index.html"><img id="logo" src="img/logo.svg" alt="logo" /></a>
     </div>
 
     <nav id="navbar">
       <ul>
-        <li>ABOUT</li>
-        <li>MENU</li>
-        <li>LOCATION</li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#location">LOCATION</a></li>
       </ul>
     </nav>
 
     <div class="section sectionLeft">
+      <a id="about" class="anchor"></a>
       <h1>About Cafe Neuvo</h1>
       <p>Coffee matters with us. Originally from Europe, we came here with a mission to bring the love of coffee to Vancouver. We
       believe a good cup starts with a cup of care and that philosophy is behind everything we serve here. Come here to
@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <div class="section sectionLeft">
+    <div id="menu" class="section sectionLeft">
       <table class="menu">
         <tr>
           <th colspan="2">FOOD</th>
@@ -83,7 +83,7 @@
           <td>4</td>
         </tr>
         <tr>
-          <td>Muffins</td>
+          <td>Blueberry Muffins</td>
           <td>4</td>
         </tr>
         <tr>
@@ -91,8 +91,16 @@
           <td>3</td>
         </tr>
         <tr>
-          <td>Cake</td>
+          <td>Carrot Cake</td>
           <td>5</td>
+        </tr>
+        <tr>
+          <td>Cheesecake</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Macaroon</td>
+          <td>3</td>
         </tr>
       </table>
     </div>
@@ -111,11 +119,19 @@
           <td>3</td>
         </tr>
         <tr>
-          <td>Tea</td>
+          <td>Latte</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Loose Leaf Tea (Assorted)</td>
           <td>3</td>
         </tr>
         <tr>
-          <td>Latte</td>
+          <td>London Fog</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Iced Infused Tea</td>
           <td>5</td>
         </tr>
       </table>
@@ -123,7 +139,7 @@
 
     
 
-    <footer class="fullSection">
+    <footer id="location" class="fullSection">
       <div class="footerLeft">
         <div id="map"></div>
       </div>
@@ -157,9 +173,7 @@
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-    crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
